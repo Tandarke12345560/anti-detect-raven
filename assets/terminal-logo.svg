@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 96" width="430" height="96" role="img" aria-label="Anti-Detect-Raven terminal logosu">
+  <title>Anti-Detect-Raven — terminal logosu</title>
+
+  <!-- siyah kutu -->
+  <rect x="0" y="0" width="430" height="96" rx="22" fill="#000000"/>
+
+  <!-- yeşil |/| glyph kutusu -->
+  <rect x="18" y="24" width="84" height="48" rx="16" fill="#000000" stroke="#2ecc59" stroke-width="2"/>
+  <text x="60" y="58" text-anchor="middle" font-family="monospace" font-size="30" font-weight="700" fill="#2ecc59">|/|</text>
+
+  <!-- marka yazısı -->
+  <text x="118" y="56" font-family="monospace" font-size="23" font-weight="700" letter-spacing="1.2" fill="#ffffff">ANTI-DETECT-RAVEN</text>
+
+  <!-- terminal imleci -->
+  <rect x="384" y="36" width="11" height="24" rx="2" fill="#2ecc59"/>
+</svg>

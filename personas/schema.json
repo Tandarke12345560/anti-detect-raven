@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Persona",
+  "description": "Coherent device persona. All fields MUST be verified against a real device capture (gl_renderer_verified=true before production use).",
+  "type": "object",
+  "required": ["id", "gpu_family", "hardware", "software", "mutable_surface"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "gpu_family": { "type": "string", "comment": "MUST match the real GPU of the device the app runs on (validated at runtime against Build/GL_RENDERER)" },
+    "hardware": {
+      "type": "object",
+      "properties": {
+        "manufacturer": { "type": "string" },
+        "device_model": { "type": "string" },
+        "soc": { "type": "string" },
+        "gpu": { "type": "string", "comment": "Exact GL_RENDERER string as reported by a REAL device, e.g. 'Mali-G52 2EEMC2'" },
+        "gl_renderer_verified": { "type": "boolean", "default": false, "comment": "false = placeholder, must not be used until captured from real hardware" },
+        "ram_gb": { "type": "integer" },
+        "cpu_cores": { "type": "integer" },
+        "cpu_arch": { "type": "string", "enum": ["aarch64"] },
+        "screen": {
+          "type": "object",
+          "properties": {
+            "width_px": { "type": "integer" },
+            "height_px": { "type": "integer" },
+            "density_dpi": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "software": {
+      "type": "object",
+      "properties": {
+        "android_version": { "type": "string", "comment": "MUST be <= device's real Android version" },
+        "sdk_int": { "type": "integer" },
+        "build_fingerprint": { "type": "string", "comment": "ro.build.fingerprint format: brand/product/device/version/...; copy from a real device of this model" },
+        "browser_engine_version": { "type": "string" }
+      }
+    },
+    "mutable_surface": {
+      "type": "object",
+      "description": "Fields the profile system may vary per profile within this device's realistic range",
+      "properties": {
+        "locale": { "type": "array", "items": { "type": "string" } },
+        "timezone": { "type": "array", "items": { "type": "string" }, "comment": "Must stay coherent with proxy exit IP geolocation" },
+        "user_agent": { "type": "string" }
+      }
+    }
+  }
+}

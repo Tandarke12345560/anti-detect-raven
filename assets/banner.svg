@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Anti-Detect-Raven hero banner">
+  <title>Anti-Detect-Raven — README hero banner</title>
+
+  <defs>
+    <pattern id="dotgrid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.7" fill="#999b9b" opacity="0.5"/>
+    </pattern>
+
+    <radialGradient id="tealGlow">
+      <stop offset="0" stop-color="#15c0cc" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#15c0cc" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="greenGlow">
+      <stop offset="0" stop-color="#2ecc59" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2ecc59" stop-opacity="0"/>
+    </radialGradient>
+
+    <g id="rmark">
+      <circle cx="100" cy="100" r="87" fill="none" stroke="#ffffff" stroke-width="14"/>
+      <circle cx="100" cy="100" r="72" fill="#15c0cc"/>
+      <g transform="translate(100 100) scale(0.95) translate(-100 -100)">
+        <path d="M160 92 L132 64 Q114 50 94 58 Q72 68 62 94 Q54 118 50 146 L84 126 Q100 140 118 130 Q136 118 140 104 Z"
+              fill="#000000" stroke-linejoin="round"/>
+        <path d="M74 106 Q94 112 106 126" fill="none" stroke="#15c0cc" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="134" cy="84" r="6" fill="#ffffff"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- zemin -->
+  <rect x="0" y="0" width="800" height="400" fill="#000000"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#dotgrid)" opacity="0.55"/>
+
+  <!-- hafif radial dokunuşlar -->
+  <circle cx="670" cy="80" r="300" fill="url(#tealGlow)"/>
+  <circle cx="90" cy="360" r="230" fill="url(#greenGlow)"/>
+
+  <!-- logo -->
+  <g transform="translate(56 74) scale(0.8)">
+    <use href="#rmark" xlink:href="#rmark"/>
+  </g>
+
+  <!-- başlık -->
+  <text x="252" y="150" font-family="sans-serif" font-size="46" font-weight="700" fill="#ffffff">Anti-Detect-Raven</text>
+
+  <!-- italik slogan -->
+  <text x="254" y="196" font-family="sans-serif" font-size="24" font-style="italic" fill="#15c0cc">İz bırakma, raven gibi uç.</text>
+
+  <!-- alt satır -->
+  <text x="254" y="232" font-family="sans-serif" font-size="15" fill="#999b9b">GeckoView + RFP tabanlı persona sistemi</text>
+
+  <!-- renk swatch şeridi -->
+  <g>
+    <rect x="40"  y="300" width="128" height="48" rx="14" fill="#000000" stroke="#999b9b" stroke-width="1.5"/>
+    <rect x="188" y="300" width="128" height="48" rx="14" fill="#272626"/>
+    <rect x="336" y="300" width="128" height="48" rx="14" fill="#15c0cc"/>
+    <rect x="484" y="300" width="128" height="48" rx="14" fill="#999b9b"/>
+    <rect x="632" y="300" width="128" height="48" rx="14" fill="#2ecc59"/>
+
+    <text x="104" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#999b9b">#000000</text>
+    <text x="252" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#999b9b">#272626</text>
+    <text x="400" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#999b9b">#15c0cc</text>
+    <text x="548" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#999b9b">#999b9b</text>
+    <text x="696" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#999b9b">#2ecc59</text>
+  </g>
+</svg>

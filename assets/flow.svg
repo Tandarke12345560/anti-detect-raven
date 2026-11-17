@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 500" width="900" height="500" role="img" aria-label="Anti-Detect-Raven mimari katmanlar diyagramı">
+  <title>Anti-Detect-Raven — mimari katmanlar</title>
+
+  <!-- zemin -->
+  <rect x="0" y="0" width="900" height="500" fill="#ffffff"/>
+
+  <!-- başlık -->
+  <text x="40" y="42" font-family="sans-serif" font-size="26" font-weight="700" fill="#000000">Mimari Katmanlar</text>
+  <text x="40" y="68" font-family="sans-serif" font-size="14" fill="#999b9b">Architecture Layers — Anti-Detect-Raven</text>
+
+  <!-- renk hiyerarşisi göstergesi -->
+  <g>
+    <rect x="520" y="50" width="14" height="14" rx="4" fill="#000000"/>
+    <text x="540" y="61" font-family="sans-serif" font-size="11" fill="#999b9b">yapı</text>
+    <rect x="596" y="50" width="14" height="14" rx="4" fill="#15c0cc"/>
+    <text x="616" y="61" font-family="sans-serif" font-size="11" fill="#999b9b">vurgu</text>
+    <rect x="676" y="50" width="14" height="14" rx="4" fill="#2ecc59"/>
+    <text x="696" y="61" font-family="sans-serif" font-size="11" fill="#999b9b">onay</text>
+    <rect x="754" y="50" width="14" height="14" rx="4" fill="#999b9b"/>
+    <text x="774" y="61" font-family="sans-serif" font-size="11" fill="#999b9b">ikincil</text>
+  </g>
+
+  <!-- sol katman yığını -->
+  <g>
+    <rect x="40" y="100" width="440" height="60" rx="20" fill="#000000" stroke="#15c0cc" stroke-width="2.5"/>
+    <text x="66" y="127" font-family="sans-serif" font-size="18" font-weight="600" fill="#ffffff">Persona Sistemi</text>
+    <text x="66" y="147" font-family="sans-serif" font-size="12.5" fill="#999b9b">UA · TZ · canvas · WebGL yüzey sabitleme</text>
+
+    <rect x="40" y="178" width="440" height="60" rx="20" fill="#000000" stroke="#999b9b" stroke-width="2"/>
+    <text x="66" y="205" font-family="sans-serif" font-size="18" font-weight="600" fill="#ffffff">Profil İzolasyonu</text>
+    <text x="66" y="225" font-family="sans-serif" font-size="12.5" fill="#999b9b">GeckoRuntime başına izole profil bağlamı</text>
+
+    <rect x="40" y="256" width="440" height="60" rx="20" fill="#000000" stroke="#15c0cc" stroke-width="2.5"/>
+    <text x="66" y="283" font-family="sans-serif" font-size="18" font-weight="600" fill="#ffffff">RFP Katmanı</text>
+    <text x="66" y="303" font-family="sans-serif" font-size="12.5" fill="#999b9b">privacy.resistFingerprinting = true</text>
+
+    <rect x="40" y="334" width="440" height="60" rx="20" fill="#000000" stroke="#999b9b" stroke-width="2"/>
+    <text x="66" y="361" font-family="sans-serif" font-size="18" font-weight="600" fill="#ffffff">Proxy / Ağ</text>
+    <text x="66" y="381" font-family="sans-serif" font-size="12.5" fill="#999b9b">HTTP / SOCKS5 — profil başına yönlendirme</text>
+
+    <rect x="40" y="412" width="440" height="60" rx="20" fill="#000000" stroke="#2ecc59" stroke-width="2.5"/>
+    <text x="66" y="439" font-family="sans-serif" font-size="18" font-weight="600" fill="#ffffff">GeckoView Motoru</text>
+    <text x="66" y="459" font-family="sans-serif" font-size="12.5" fill="#999b9b">Gecko engine — derlendi ve doğrulandı</text>
+    <circle cx="446" cy="442" r="14" fill="#2ecc59"/>
+    <path d="M439 442 L444 447 L453 436" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- katmanlar arası akış okları -->
+  <g fill="#15c0cc">
+    <path d="M252 162 L268 162 L260 176 Z"/>
+    <path d="M252 240 L268 240 L260 254 Z"/>
+    <path d="M252 318 L268 318 L260 332 Z"/>
+    <path d="M252 396 L268 396 L260 410 Z"/>
+  </g>
+
+  <!-- sağ not kartları -->
+  <g>
+    <rect x="520" y="100" width="340" height="120" rx="20" fill="#000000"/>
+    <text x="546" y="134" font-family="sans-serif" font-size="17" font-weight="600" fill="#ffffff">Katman Akışı</text>
+    <text x="546" y="160" font-family="sans-serif" font-size="12.5" fill="#999b9b">Persona → RFP → GeckoView</text>
+    <text x="546" y="182" font-family="sans-serif" font-size="12.5" fill="#999b9b">UA / TZ / canvas sabitlenir</text>
+    <text x="546" y="204" font-family="sans-serif" font-size="12.5" fill="#999b9b">Sekme = izole profil bağlamı</text>
+
+    <rect x="520" y="236" width="340" height="120" rx="20" fill="#000000" stroke="#15c0cc" stroke-width="2.5"/>
+    <text x="546" y="270" font-family="sans-serif" font-size="17" font-weight="600" fill="#15c0cc">RFP + Persona</text>
+    <text x="546" y="298" font-family="sans-serif" font-size="12.5" fill="#999b9b">privacy.resistFingerprinting</text>
+    <text x="546" y="320" font-family="sans-serif" font-size="12.5" fill="#999b9b">letterboxing ile ekran kırpma</text>
+    <text x="546" y="342" font-family="sans-serif" font-size="12.5" fill="#999b9b">persona validator (GPU ailesi)</text>
+
+    <rect x="520" y="372" width="340" height="100" rx="20" fill="#000000" stroke="#2ecc59" stroke-width="2.5"/>
+    <text x="546" y="406" font-family="sans-serif" font-size="17" font-weight="600" fill="#2ecc59">Motor Uyumu</text>
+    <text x="546" y="434" font-family="sans-serif" font-size="12.5" fill="#999b9b">GeckoView — derleme + smoke test</text>
+    <text x="546" y="456" font-family="sans-serif" font-size="12.5" fill="#999b9b">RFP ön ayarları shipped default</text>
+    <circle cx="822" cy="422" r="15" fill="#2ecc59"/>
+    <path d="M815 422 L820 427 L830 415" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

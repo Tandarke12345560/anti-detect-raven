@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" role="img" aria-label="Anti-Detect-Raven build pipeline adım diyagramı">
+  <title>Anti-Detect-Raven — build pipeline</title>
+
+  <!-- zemin -->
+  <rect x="0" y="0" width="900" height="450" fill="#ffffff"/>
+
+  <!-- başlık -->
+  <text x="31" y="44" font-family="sans-serif" font-size="26" font-weight="700" fill="#000000">Build Pipeline</text>
+  <text x="31" y="70" font-family="sans-serif" font-size="14" fill="#999b9b">Derleme Hattı — Fork'tan APK'ya 7 adım</text>
+
+  <!-- satır bağlantı okları -->
+  <g fill="none" stroke="#999b9b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M226 162 H236 M232 157 L239 162 L232 167"/>
+    <path d="M442 162 H452 M448 157 L455 162 L448 167"/>
+    <path d="M658 162 H668 M664 157 L671 162 L664 167"/>
+    <path d="M226 358 H236 M232 353 L239 358 L232 363"/>
+    <path d="M442 358 H452 M448 353 L455 358 L448 363"/>
+    <path d="M658 358 H668 M664 353 L671 358 L664 363"/>
+  </g>
+
+  <!-- satır 1 → satır 2 dirsek bağlantısı -->
+  <g>
+    <path d="M774 226 V260 H126 V290" fill="none" stroke="#999b9b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M120 290 L132 290 L126 300 Z" fill="#999b9b"/>
+  </g>
+
+  <!-- 1. Fork -->
+  <g>
+    <rect x="31" y="104" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="61" cy="136" r="19" fill="#15c0cc"/>
+    <text x="61" y="143" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">1</text>
+    <text x="89" y="143" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">Fork</text>
+    <text x="53" y="178" font-family="monospace" font-size="12" fill="#999b9b">Iceraven fork'unu</text>
+    <text x="53" y="198" font-family="monospace" font-size="12" fill="#999b9b">git clone --depth 1</text>
+  </g>
+
+  <!-- 2. Submodule -->
+  <g>
+    <rect x="247" y="104" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="277" cy="136" r="19" fill="#15c0cc"/>
+    <text x="277" y="143" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">2</text>
+    <text x="305" y="143" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">Submodule</text>
+    <text x="269" y="178" font-family="monospace" font-size="12" fill="#999b9b">git submodule update</text>
+    <text x="269" y="198" font-family="monospace" font-size="12" fill="#999b9b">--init --recursive</text>
+  </g>
+
+  <!-- 3. Patch script -->
+  <g>
+    <rect x="463" y="104" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="493" cy="136" r="19" fill="#15c0cc"/>
+    <text x="493" y="143" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">3</text>
+    <text x="521" y="143" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">Patch Script</text>
+    <text x="485" y="178" font-family="monospace" font-size="12" fill="#999b9b">android_components</text>
+    <text x="485" y="198" font-family="monospace" font-size="12" fill="#999b9b">yama script'ini çalıştır</text>
+  </g>
+
+  <!-- 4. NDK / SDK -->
+  <g>
+    <rect x="679" y="104" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="709" cy="136" r="19" fill="#15c0cc"/>
+    <text x="709" y="143" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">4</text>
+    <text x="737" y="143" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">NDK / SDK</text>
+    <text x="701" y="178" font-family="monospace" font-size="12" fill="#999b9b">ndk;29.0.14206865</text>
+    <text x="701" y="198" font-family="monospace" font-size="12" fill="#999b9b">SDK 37.2 + build-tools</text>
+  </g>
+
+  <!-- 5. Gradle -->
+  <g>
+    <rect x="31" y="300" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="61" cy="332" r="19" fill="#15c0cc"/>
+    <text x="61" y="339" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">5</text>
+    <text x="89" y="339" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">Gradle</text>
+    <text x="53" y="374" font-family="monospace" font-size="12" fill="#999b9b">app:assembleForkDebug</text>
+    <text x="53" y="394" font-family="monospace" font-size="12" fill="#999b9b">-PversionName=0.1.0-adr</text>
+  </g>
+
+  <!-- 6. APK -->
+  <g>
+    <rect x="247" y="300" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="277" cy="332" r="19" fill="#15c0cc"/>
+    <text x="277" y="339" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">6</text>
+    <text x="305" y="339" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">APK</text>
+    <text x="269" y="374" font-family="monospace" font-size="12" fill="#999b9b">arm64-v8a · x86_64</text>
+    <text x="269" y="394" font-family="monospace" font-size="12" fill="#999b9b">armeabi-v7a çıktıları</text>
+  </g>
+
+  <!-- 7. Test -->
+  <g>
+    <rect x="463" y="300" width="190" height="116" rx="20" fill="#000000"/>
+    <circle cx="493" cy="332" r="19" fill="#15c0cc"/>
+    <text x="493" y="339" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#000000">7</text>
+    <text x="521" y="339" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">Test</text>
+    <text x="485" y="374" font-family="monospace" font-size="12" fill="#999b9b">RFP + persona</text>
+    <text x="485" y="394" font-family="monospace" font-size="12" fill="#999b9b">doğrulama testleri</text>
+  </g>
+
+  <!-- sonuç: Release -->
+  <g>
+    <rect x="679" y="300" width="190" height="116" rx="20" fill="#000000" stroke="#2ecc59" stroke-width="2.5"/>
+    <circle cx="709" cy="332" r="19" fill="#2ecc59"/>
+    <path d="M701 332 L707 338 L718 325" fill="none" stroke="#000000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="737" y="339" font-family="sans-serif" font-size="16" font-weight="600" fill="#ffffff">Release</text>
+    <text x="701" y="374" font-family="monospace" font-size="12" fill="#999b9b">GitHub Release</text>
+    <text x="701" y="394" font-family="monospace" font-size="12" fill="#999b9b">v0.1.0-adr yayınla</text>
+  </g>
+
+  <!-- alt not -->
+  <text x="31" y="442" font-family="sans-serif" font-size="12" fill="#999b9b">Detaylar: docs/BUILD.md · APK çıktı yolları README içindeki tabloda.</text>
+</svg>

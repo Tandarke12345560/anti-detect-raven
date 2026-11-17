@@ -1,0 +1,27 @@
+{
+  "id": "mali-g52-redmi-note-9-a",
+  "gpu_family": "Mali-G52",
+  "hardware": {
+    "manufacturer": "Xiaomi",
+    "device_model": "Redmi Note 9 (MTK)",
+    "soc": "MediaTek Helio G85",
+    "gpu": "Mali-G52 2EEMC2",
+    "gl_renderer_verified": false,
+    "ram_gb": 4,
+    "cpu_cores": 8,
+    "cpu_arch": "aarch64",
+    "screen": { "width_px": 1080, "height_px": 2340, "density_dpi": 395 }
+  },
+  "software": {
+    "android_version": "10",
+    "sdk_int": 29,
+    "build_fingerprint": "REPLACE_WITH_REAL_CAPTURE:xiaomi/merlin/merlin:10/QP1A...",
+    "browser_engine_version": "gecko-115+"
+  },
+  "mutable_surface": {
+    "locale": ["tr-TR", "en-GB"],
+    "timezone": ["Europe/Istanbul"],
+    "user_agent": "REPLACE_WITH_REAL_CAPTURE"
+  },
+  "_notes": "PLACEHOLDER. Helio G85 = Mali-G52 2EEMC2. Capture real values via adb from a physical unit."
+}

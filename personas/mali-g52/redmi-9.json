@@ -1,0 +1,27 @@
+{
+  "id": "mali-g52-redmi-9-a",
+  "gpu_family": "Mali-G52",
+  "hardware": {
+    "manufacturer": "Xiaomi",
+    "device_model": "Redmi 9",
+    "soc": "MediaTek Helio G80",
+    "gpu": "Mali-G52 2EEMC2",
+    "gl_renderer_verified": false,
+    "ram_gb": 3,
+    "cpu_cores": 8,
+    "cpu_arch": "aarch64",
+    "screen": { "width_px": 1080, "height_px": 2340, "density_dpi": 395 }
+  },
+  "software": {
+    "android_version": "10",
+    "sdk_int": 29,
+    "build_fingerprint": "REPLACE_WITH_REAL_CAPTURE:xiaomi/galahad/galahad:10/QP1A...",
+    "browser_engine_version": "gecko-115+"
+  },
+  "mutable_surface": {
+    "locale": ["tr-TR", "en-GB", "en-US"],
+    "timezone": ["Europe/Istanbul", "Europe/Berlin"],
+    "user_agent": "REPLACE_WITH_REAL_CAPTURE: capture UA from a real Redmi 9 GeckoView build"
+  },
+  "_notes": "PLACEHOLDER persona. Do not ship until build_fingerprint, UA and gl_renderer_verified are captured from a real device (adb shell getprop ro.build.fingerprint; GPU string via 'adb shell dumpsys SurfaceFlinger | grep GLES' or an app reading GL_RENDERER)."
+}

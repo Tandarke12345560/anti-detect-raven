@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Anti-Detect-Raven logosu — koyu zemin">
+  <title>Anti-Detect-Raven — koyu zemin logosu</title>
+
+  <!-- koyu zemin plakası -->
+  <rect x="1" y="1" width="198" height="198" rx="44" fill="#000000"/>
+
+  <!-- beyaz dış halka -->
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#ffffff" stroke-width="14"/>
+
+  <!-- iç turkuaz nokta -->
+  <circle cx="100" cy="100" r="70" fill="#15c0cc"/>
+
+  <!-- geometrik karga silueti -->
+  <g transform="translate(100 100) scale(0.92) translate(-100 -100)">
+    <path d="M160 92 L132 64 Q114 50 94 58 Q72 68 62 94 Q54 118 50 146 L84 126 Q100 140 118 130 Q136 118 140 104 Z"
+          fill="#000000" stroke-linejoin="round"/>
+    <path d="M74 106 Q94 112 106 126" fill="none" stroke="#15c0cc" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="134" cy="84" r="6" fill="#ffffff"/>
+  </g>
+</svg>
